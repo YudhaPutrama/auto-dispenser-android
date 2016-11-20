@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:alarmdispenser="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Save Alarm"
+        android:id="@+id/action_save_alarm_details"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_save"
+        alarmdispenser:showAsAction="always"/>
+
+</menu>
