@@ -12,17 +12,12 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
-
-import org.apache.http.util.ExceptionUtils;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.List;
 
+import sabayouth.alarmdispenser.connection.DeviceWifiService;
 import sabayouth.alarmdispenser.helper.DBStatisticHelper;
 
 public class DeviceActivity extends ActionBarActivity implements View.OnClickListener{
@@ -137,10 +132,10 @@ public class DeviceActivity extends ActionBarActivity implements View.OnClickLis
         @Override
         protected Void doInBackground(Void... arg0) {
             // Creating service handler class instance
-            DeviceService deviceService = new DeviceService(getApplicationContext());
+            DeviceWifiService deviceWifiService = new DeviceWifiService(getApplicationContext());
 
             // Making a request to url and getting response
-            String jsonStr = deviceService.makeServiceCall(url, DeviceService.GET);
+            String jsonStr = deviceWifiService.makeServiceCall(url, DeviceWifiService.GET);
 
             Log.d("Response: ", "> " + jsonStr);
 

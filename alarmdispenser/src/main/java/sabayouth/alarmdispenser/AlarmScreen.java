@@ -22,6 +22,7 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import sabayouth.alarmdispenser.connection.DeviceWifiService;
 import sabayouth.alarmdispenser.helper.DBAlarmHelper;
 import sabayouth.alarmdispenser.helper.DBStatisticHelper;
 
@@ -156,8 +157,8 @@ public class AlarmScreen extends Activity {
     private class PourAction extends AsyncTask<Void, Void, Void>{
         @Override
         protected Void doInBackground(Void... params) {
-            DeviceService deviceService = new DeviceService(getApplicationContext());
-            String data = deviceService.makeServiceCall(url,DeviceService.GET);
+            DeviceWifiService deviceWifiService = new DeviceWifiService(getApplicationContext());
+            String data = deviceWifiService.makeServiceCall(url, DeviceWifiService.GET);
             Log.d("Response: ", "> " + data);
             if(data!=null){
                 try{

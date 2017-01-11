@@ -1,4 +1,4 @@
-package sabayouth.alarmdispenser;
+package sabayouth.alarmdispenser.connection;
 
 import android.content.Context;
 import android.net.wifi.WifiConfiguration;
@@ -19,13 +19,13 @@ import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
-public class DeviceService {
+public class DeviceWifiService {
 
     static String response = null;
     public final static int GET = 1;
     public final static int POST = 2;
     private Context mContext;
-    public DeviceService(Context context) {
+    public DeviceWifiService(Context context) {
         mContext=context;
     }
     public Boolean connectAutoDispenser(){

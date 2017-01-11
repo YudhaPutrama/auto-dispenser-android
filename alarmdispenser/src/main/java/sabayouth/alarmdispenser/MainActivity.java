@@ -20,6 +20,8 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import sabayouth.alarmdispenser.adapter.AlarmListAdapter;
+import sabayouth.alarmdispenser.connection.DeviceWifiService;
 import sabayouth.alarmdispenser.helper.DBAlarmHelper;
 import sabayouth.alarmdispenser.helper.DBStatisticHelper;
 import sabayouth.alarmdispenser.model.AlarmModel;
@@ -89,7 +91,7 @@ public class MainActivity extends ActionBarActivity{
             case R.id.action_wifi_connect:{
                 //url="http://192.168.4.1/tuang/";
                 //new GetStatus().execute();
-                //new DeviceService(getApplicationContext()).connectAutoDispenser();
+                //new DeviceWifiService(getApplicationContext()).connectAutoDispenser();
                 startActivity(new Intent(this,DeviceActivity.class));
                 break;
             }
@@ -160,10 +162,10 @@ public class MainActivity extends ActionBarActivity{
         @Override
         protected Void doInBackground(Void... arg0) {
             // Creating service handler class instance
-            DeviceService deviceService = new DeviceService(getApplicationContext());
+            DeviceWifiService deviceWifiService = new DeviceWifiService(getApplicationContext());
 
             // Making a request to url and getting response
-            String jsonStr = deviceService.makeServiceCall(url, DeviceService.GET);
+            String jsonStr = deviceWifiService.makeServiceCall(url, DeviceWifiService.GET);
 
             Log.d("Response: ", "> " + jsonStr);
 

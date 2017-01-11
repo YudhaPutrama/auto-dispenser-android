@@ -1,4 +1,4 @@
-package sabayouth.alarmdispenser;
+package sabayouth.alarmdispenser.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,6 +12,8 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import sabayouth.alarmdispenser.R;
 
 @SuppressLint("NewApi")
  public class CustomSwitch extends FrameLayout {

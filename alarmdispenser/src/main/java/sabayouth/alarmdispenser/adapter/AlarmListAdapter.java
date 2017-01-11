@@ -1,4 +1,4 @@
-package sabayouth.alarmdispenser;
+package sabayouth.alarmdispenser.adapter;
 
 import java.util.List;
 
@@ -16,6 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import sabayouth.alarmdispenser.MainActivity;
+import sabayouth.alarmdispenser.R;
 import sabayouth.alarmdispenser.model.AlarmModel;
 
 public class AlarmListAdapter extends BaseAdapter {

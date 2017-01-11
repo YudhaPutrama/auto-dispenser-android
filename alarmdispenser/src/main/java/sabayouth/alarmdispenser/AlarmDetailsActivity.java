@@ -17,6 +17,7 @@ import android.widget.TimePicker;
 
 import sabayouth.alarmdispenser.helper.DBAlarmHelper;
 import sabayouth.alarmdispenser.model.AlarmModel;
+import sabayouth.alarmdispenser.view.CustomSwitch;
 
 public class AlarmDetailsActivity extends ActionBarActivity {
 	
