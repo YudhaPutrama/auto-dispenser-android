@@ -44,7 +44,6 @@ public class DeviceActivity extends ActionBarActivity implements View.OnClickLis
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarDevice);
         setSupportActionBar(toolbar);
         ActionBar actionbar=getSupportActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setTitle("Auto Dispenser Demonstration");
 
         connectButton = (Button) findViewById(R.id.connectButton);
@@ -93,6 +92,7 @@ public class DeviceActivity extends ActionBarActivity implements View.OnClickLis
             }
             case R.id.actionStop:{
                 url="http://192.168.4.1/stop";
+
                 new GetStatus().execute();
                 break;
             }

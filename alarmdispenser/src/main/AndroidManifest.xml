@@ -25,6 +25,10 @@
         <activity android:name=".AlarmScreen"/>
         <activity android:name=".AlarmDetailsActivity"/>
         <activity android:name=".DeviceActivity"/>
+        <activity android:name=".DeviceScanActivity"/>
+        <activity android:name=".DeviceControlActivity"/>
+
+        <service android:name=".connection.BluetoothLeService"/>
         <service android:name=".AlarmService" android:enabled="true"/>
         <receiver android:name=".AlarmManagerHelper">
             <intent-filter>

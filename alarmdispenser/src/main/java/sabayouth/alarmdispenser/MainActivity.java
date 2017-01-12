@@ -92,7 +92,14 @@ public class MainActivity extends ActionBarActivity{
                 //url="http://192.168.4.1/tuang/";
                 //new GetStatus().execute();
                 //new DeviceWifiService(getApplicationContext()).connectAutoDispenser();
-                startActivity(new Intent(this,DeviceActivity.class));
+                Intent i = new Intent(this, DeviceActivity.class);
+
+                startActivity(i);
+                break;
+            }
+            case R.id.action_bluetooh_connect:{
+                Intent i = new Intent(this, DeviceScanActivity.class);
+                startActivity(i);
                 break;
             }
 		}

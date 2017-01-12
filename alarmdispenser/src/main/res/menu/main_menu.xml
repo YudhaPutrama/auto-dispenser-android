@@ -8,9 +8,15 @@
         android:icon="@drawable/ic_action_add"
         alarmdispenser:showAsAction="always"/>
     <item
-        android:title="Connect Device"
+        android:title="Manual Device"
         android:id="@+id/action_wifi_connect"
         android:orderInCategory="100"
         android:icon="@drawable/ic_device_connect"
+        alarmdispenser:showAsAction="ifRoom"/>
+    <item
+        android:title="Connect Bluetooth"
+        android:id="@+id/action_bluetooh_connect"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_bluetooth_white_24dp"
         alarmdispenser:showAsAction="ifRoom"/>
 </menu>

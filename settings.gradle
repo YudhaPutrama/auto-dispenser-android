@@ -1,1 +1,1 @@
-include ':app', ':simpledispenser', ':alarmdispenser'
+include ':alarmdispenser'
